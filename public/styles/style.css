@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  height: 5vh;
+}
+.form_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+
+.form_elem {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.form_elem.error input {
+  border-color: red;
+}
+.form_elem.success input {
+  border-color: #2ecc71;
+}
+
+.form_elem small {
+  color: red;
+  display: inline;
+  margin: 5px 0;
+  visibility: hidden;
+}
+
+.form_elem.error small {
+  visibility: visible;
+}

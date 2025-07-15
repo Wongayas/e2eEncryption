@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: #f0f8ff;
+      color: #111;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .file-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    #file {
+      flex: 1;
+    }
+
+    form {
+      background-color: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      min-width: 350px;
+      max-width: 500px;
+      align-items: center;
+    }
+
+    input[type="file"],
+    #link {
+      width: 100%;
+    }
+
+    .password-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    #password {
+      flex: 1;
+    }
+
+    button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #4682b4;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #5a9bd4;
+    }
+
+    a#link {
+      display: inline-block;
+      word-break: break-all;
+      padding: 5px;
+      background-color: #e6f7ff;
+      border: 1px solid #b3d9ff;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #003366;
+      text-align: center;
+    }
+    #share_section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    #share_section p {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    #share_section a#link {
+      width: 100%;
+    }
+
+    #share_section button {
+      width: fit-content;
+    }
+  </style>
+  <body>
+    <form>
+      <div class="file-row">
+        <label for="file">File</label>
+        <input id="file" type="file" name="file" value="" />
+      </div>
+
+      <div class="password-row">
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password" required />
+        <button type="button" id="show_pas" onclick="myFunction()">
+          Show/hide
+        </button>
+        <button type="button" id="encrypt">Encrypt</button>
+      </div>
+      <div id="share_section"></div>
+    </form>
+
+    <script src="/scripts/encrypt.js"></script>
+  </body>
+</html>
